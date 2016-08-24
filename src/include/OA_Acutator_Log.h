@@ -3,7 +3,7 @@
 
 #include "OA_Acutator.h"
 
-class Acutator_Log : public OA_Acutator{
+class Acutator_Log : public Acutator{
 	public:
 		Acutator_Log(char* message);
 		void setMessage(char* message);

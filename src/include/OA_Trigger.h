@@ -1,6 +1,8 @@
 #ifndef _OA_TRIGGER_
 #define _OA_TRIGGER_
 
+#include "OA_Acutator.h"
+
 class Trigger{
 	public:
 		Trigger(Acutator acutator);
@@ -10,6 +12,7 @@ class Trigger{
 	private:
 		Acutator acutator;
 		bool triggered;
+		bool active;
 };
 
 #endif
