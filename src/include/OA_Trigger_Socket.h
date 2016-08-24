@@ -5,8 +5,10 @@
 
 class Trigger_Socket : public Trigger{
 	public:
-		Trigger_Socket(const char* host = "localhost", int port = 1111);
+		Trigger_Socket(const char* host = "localhost", const int port = 1111);
 	private:
+		char* host;
+		int port;
 };
 
 #endif

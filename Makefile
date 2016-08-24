@@ -1,11 +1,16 @@
 CC=g++
-CFLAGS=-Wall
+CFLAGS=-Wall -Wextra -Werror -std=c++14
 LDFLAGS=
 SOURCES=
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=openalarm
 
-all: $(SOURCES) $(EXECUTABLE)
+mkbin: 
+	mkdir bin
+
+all: mkbin $(SOURCES) $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+
+clean:
